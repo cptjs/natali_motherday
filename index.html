@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <title>Для тебе · з любов'ю</title>
+  <meta name="description" content="Маленька історія про одну дівчину, яка стала мамою." />
+
+  <!-- ── Open Graph (для прев'ю в iMessage / Telegram) ───────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:title" content="Для тебе · з любов'ю" />
+  <meta property="og:description" content="Історія про одну дівчину, яка завжди мала величезне серце." />
+  <meta property="og:image" content="assets/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#1a0f08" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- ── Шрифти ───────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- favicon (мінімальне серце) -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c9a064' d='M12 21s-7-4.5-9.5-9C0 8 2 4 6 4c2 0 3.5 1 4 2 .5-1 2-2 4-2 4 0 6 4 3.5 8C19 16.5 12 21 12 21Z'/%3E%3C/svg%3E"
+  />
+</head>
+<body>
+  <!-- Прогрес-бар читання -->
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+  <!-- Музика-перемикач (на майбутнє - закоментовано) -->
+
+  <main id="story">
+    <!-- ════════════════════════════════════════════════════════════════
+         АКТ 1 · ВІДКРИТТЯ
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="act act--intro" data-act="1" data-mood="dark">
+      <div class="dust" aria-hidden="true"></div>
+      <div class="vignette" aria-hidden="true"></div>
+
+      <div class="act__content act__content--center">
+        <p class="overline reveal" data-reveal-delay="200">розділ перший</p>
+        <h1 class="display display--lg typewriter" data-typewriter data-text="Ця історія про одну дівчину, яка завжди мала величезне серце…"></h1>
+        <p class="caption reveal" data-reveal-delay="3800">провести пальцем вгору ↑</p>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint__line"></span>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         АКТ 2 · БЛАНКО
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="act act--blanko" data-act="2" data-mood="warm">
+      <div class="act__content act__content--center">
+        <p class="overline reveal">розділ другий · ера Бланко</p>
+        <h2 class="display display--md reveal" data-reveal-delay="400">
+          І&nbsp;першим це&nbsp;зрозумів <em>він…</em>
+        </h2>
+        <p class="caption reveal" data-reveal-delay="900">пес, який знав тебе раніше за сина</p>
+      </div>
+    </section>
+
+    <section class="act act--photo act--blanko" data-act="2" data-mood="warm">
+      <figure class="photo-frame photo-frame--vintage">
+        <img
+          class="photo photo--vintage reveal-photo"
+          src="assets/blanko-1.svg"
+          alt="Ти і Бланко"
+          loading="lazy"
+          decoding="async"
+        />
+        <!-- TODO: замінити src на реальне фото Бланко №1 -->
+      </figure>
+      <figcaption class="caption-block reveal">
+        <p class="caption-block__text">Ти&nbsp;була&nbsp;тою, хто&nbsp;вставав до&nbsp;нього вночі</p>
+      </figcaption>
+    </section>
+
+    <section class="act act--photo act--blanko" data-act="2" data-mood="warm">
+      <figure class="photo-frame photo-frame--vintage">
+        <img
+          class="photo photo--vintage reveal-photo"
+          src="assets/blanko-2.svg"
+          alt="Прогулянки з Бланко"
+          loading="lazy"
+          decoding="async"
+        />
+        <!-- TODO: замінити src на реальне фото Бланко №2 -->
+      </figure>
+      <figcaption class="caption-block reveal">
+        <p class="caption-block__text">Хто&nbsp;гуляв з&nbsp;ним у&nbsp;дощ</p>
+      </figcaption>
+    </section>
+
+    <section class="act act--photo act--blanko" data-act="2" data-mood="warm">
+      <figure class="photo-frame photo-frame--vintage">
+        <img
+          class="photo photo--vintage reveal-photo"
+          src="assets/blanko-3.svg"
+          alt="Бланко"
+          loading="lazy"
+          decoding="async"
+        />
+        <!-- TODO: замінити src на реальне фото Бланко №3 -->
+      </figure>
+      <figcaption class="caption-block reveal">
+        <p class="caption-block__text">Хто&nbsp;любив його як&nbsp;сина</p>
+      </figcaption>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         АКТ 3 · ПОВОРОТ
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="act act--turn" data-act="3" data-mood="dark">
+      <div class="dust dust--soft" aria-hidden="true"></div>
+      <div class="act__content act__content--center">
+        <p class="overline reveal turn-overline">а потім…</p>
+        <h2 class="year-mark" data-typewriter-year>2025</h2>
+        <div class="turn-line">
+          <h3 class="display display--md italic" data-turn-line>Ти стала мамою.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="act act--hero" data-act="3" data-mood="hero">
+      <figure class="photo-frame photo-frame--full">
+        <img
+          class="photo photo--hero reveal-hero"
+          src="assets/maksym-hero.svg"
+          alt="Перше фото з Максимом"
+          loading="lazy"
+          decoding="async"
+        />
+        <!-- TODO: ГОЛОВНЕ ФОТО — перше з Максимом. Велике, портретне. -->
+        <figcaption class="hero-caption">
+          <span>Максим</span>
+          <span class="hero-caption__sep">·</span>
+          <span>2025</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         АКТ 4 · НАЙКРАЩИЙ І НАЙВАЖЧИЙ РІК
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="act act--maksym" data-act="4" data-mood="bright">
+      <div class="act__content act__content--center">
+        <p class="overline reveal">розділ четвертий</p>
+        <h2 class="display display--md reveal" data-reveal-delay="400">
+          Це&nbsp;був найкращий <br />і&nbsp;найважчий рік.
+        </h2>
+        <!-- TODO: замінити цю частину на твій точний текст -->
+      </div>
+    </section>
+
+    <section class="act act--photo act--maksym" data-act="4" data-mood="bright">
+      <figure class="photo-frame">
+        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-1.svg" alt="Максим" loading="lazy" decoding="async" />
+        <!-- TODO: замінити src на реальне фото Максима №1 -->
+      </figure>
+      <figcaption class="caption-block reveal">
+        <p class="caption-block__text">
+          Безсонні ночі. Перші зубчики. Сумніви о&nbsp;3-й&nbsp;ранку.
+        </p>
+        <!-- TODO: замінити підпис -->
+      </figcaption>
+    </section>
+
+    <section class="act act--photo act--maksym" data-act="4" data-mood="bright">
+      <figure class="photo-frame">
+        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-2.svg" alt="Максим" loading="lazy" decoding="async" />
+        <!-- TODO: замінити src на реальне фото Максима №2 -->
+      </figure>
+      <figcaption class="caption-block reveal">
+        <p class="caption-block__text">
+          Перша&nbsp;посмішка, що&nbsp;ламає всі&nbsp;твої&nbsp;побоювання навпіл.
+        </p>
+        <!-- TODO: замінити підпис -->
+      </figcaption>
+    </section>
+
+    <section class="act act--photo act--maksym" data-act="4" data-mood="bright">
+      <figure class="photo-frame">
+        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-3.svg" alt="Максим" loading="lazy" decoding="async" />
+        <!-- TODO: замінити src на реальне фото Максима №3 -->
+      </figure>
+      <figcaption class="caption-block reveal">
+        <p class="caption-block__text">
+          І&nbsp;ти&nbsp;— ніколи&nbsp;— не&nbsp;здавалася.
+        </p>
+      </figcaption>
+    </section>
+
+    <!-- Опційне відео. Якщо не потрібно — видалити цю секцію цілком. -->
+    <section class="act act--video" data-act="4" data-mood="bright">
+      <figure class="photo-frame photo-frame--video">
+        <!-- TODO: підкласти видеофайл assets/maksym.mp4 (≤15 сек, до 5 МБ).
+             poster — кадр з відео. -->
+        <video
+          class="reveal-photo"
+          playsinline
+          muted
+          preload="metadata"
+          poster="assets/maksym-2.svg"
+          controls
+        >
+          <source src="assets/maksym.mp4" type="video/mp4" />
+        </video>
+      </figure>
+      <figcaption class="caption-block reveal">
+        <p class="caption-block__text caption-block__text--small italic">
+          невелика мить · 2025
+        </p>
+      </figcaption>
+    </section>
+
+    <section class="act act--family" data-act="4" data-mood="bright">
+      <figure class="photo-frame photo-frame--full">
+        <img
+          class="photo photo--vibrant reveal-photo"
+          src="assets/family.svg"
+          alt="Наша сім'я"
+          loading="lazy"
+          decoding="async"
+        />
+        <!-- TODO: замінити на сімейне фото (ти, я, Максим, Бланко). -->
+      </figure>
+      <div class="act__content act__content--bottom">
+        <p class="display display--sm italic reveal">
+          Ти&nbsp;— неймовірна.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         АКТ 5 · ПОДАРУНОК
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="act act--gift-intro" data-act="5" data-mood="warm">
+      <div class="act__content act__content--center">
+        <p class="overline reveal">розділ п'ятий · подарунок</p>
+        <h2 class="display display--md reveal" data-reveal-delay="400">
+          І&nbsp;тому ти&nbsp;заслуговуєш на&nbsp;маленький <em>подарунок…</em>
+        </h2>
+
+        <button
+          class="envelope reveal"
+          id="envelope"
+          type="button"
+          data-reveal-delay="900"
+          aria-label="Відкрити подарунок"
+        >
+          <svg class="envelope__svg" viewBox="0 0 240 160" aria-hidden="true">
+            <!-- тіло конверта -->
+            <rect x="10" y="40" width="220" height="110" rx="6" fill="#f4e2c4" stroke="#c9a064" stroke-width="1.5"/>
+            <!-- бічні складки -->
+            <path d="M 10 40 L 120 110 L 230 40 Z" fill="#e8d2ac" stroke="#c9a064" stroke-width="1"/>
+            <path d="M 10 150 L 90 100 L 10 50 Z" fill="#ecd6b1" stroke="none" opacity="0.6"/>
+            <path d="M 230 150 L 150 100 L 230 50 Z" fill="#ecd6b1" stroke="none" opacity="0.6"/>
+            <!-- верхній клапан (анімований) -->
+            <g class="envelope__flap">
+              <path d="M 10 40 L 120 10 L 230 40 L 120 110 Z" fill="#e8d2ac" stroke="#c9a064" stroke-width="1.5"/>
+            </g>
+            <!-- сургучна печатка -->
+            <g class="envelope__seal">
+              <circle cx="120" cy="75" r="18" fill="#9a3a3a"/>
+              <circle cx="120" cy="75" r="14" fill="none" stroke="#fae3c1" stroke-width="0.8" opacity="0.7"/>
+              <text x="120" y="80" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="16" font-style="italic" fill="#fae3c1">M</text>
+            </g>
+          </svg>
+          <span class="envelope__hint">торкнись, щоб відкрити</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="act act--gift-reveal" data-act="5" data-mood="gift" id="giftReveal">
+      <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+
+      <div class="act__content act__content--center">
+        <article class="certificate" id="certificate" aria-label="Подарунковий сертифікат">
+          <div class="certificate__corner certificate__corner--tl"></div>
+          <div class="certificate__corner certificate__corner--tr"></div>
+          <div class="certificate__corner certificate__corner--bl"></div>
+          <div class="certificate__corner certificate__corner--br"></div>
+
+          <p class="certificate__overline">подарунковий сертифікат</p>
+          <h3 class="certificate__store">[НАЗВА КНИГАРНІ]</h3>
+          <!-- TODO: вписати назву книгарні (Yakaboo / Книгарня «Є» / Vivat / …) -->
+
+          <div class="certificate__amount">
+            <span class="certificate__currency">₴</span>
+            <span class="certificate__value">XXXX</span>
+          </div>
+          <!-- TODO: замінити XXXX на суму -->
+
+          <p class="certificate__note">
+            «Для&nbsp;найкращої мами на&nbsp;світі. <br />Обери собі будь-яку книжку — <br />і&nbsp;трохи&nbsp;тиші, щоб&nbsp;її&nbsp;прочитати.»
+          </p>
+
+          <div class="certificate__footer">
+            <span class="certificate__code">№ XXXX-XXXX</span>
+            <!-- TODO: код сертифіката або інструкція як використати -->
+          </div>
+        </article>
+
+        <p class="display display--sm italic final-message">
+          З&nbsp;Днем Матері, кохана.
+        </p>
+
+        <div class="actions">
+          <button class="btn btn--primary" id="shareBtn" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14 9V5l7 7-7 7v-4H7c-2 0-3-1-3-3s1-3 3-3h7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+            <span>Поділитися</span>
+          </button>
+          <button class="btn btn--ghost" id="restartBtn" type="button">
+            ↑ Прочитати знову
+          </button>
+        </div>
+
+        <p class="signature">— від&nbsp;того, хто&nbsp;тебе&nbsp;любить</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- toast для копіювання -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

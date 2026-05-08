@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g3" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#6B4F3A"/>
+      <stop offset="50%" stop-color="#9C7B58"/>
+      <stop offset="100%" stop-color="#E8C99B"/>
+    </linearGradient>
+    <radialGradient id="v3" cx="0.5" cy="0.5" r="0.8">
+      <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(25,15,8,0.6)"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g3)"/>
+  <g opacity="0.18" fill="#fff">
+    <circle cx="180" cy="220" r="2.5"/>
+    <circle cx="600" cy="180" r="2"/>
+    <circle cx="350" cy="350" r="2.5"/>
+    <circle cx="700" cy="450" r="3"/>
+    <circle cx="120" cy="600" r="2"/>
+    <circle cx="500" cy="700" r="2.5"/>
+  </g>
+  <path d="M 250 600 Q 400 520 550 600 Q 480 680 400 700 Q 320 680 250 600 Z" fill="rgba(255,240,215,0.2)"/>
+  <rect width="800" height="1000" fill="url(#v3)"/>
+  <text x="400" y="935" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="rgba(255,245,225,0.55)" font-style="italic">Бланко · фото 3</text>
+</svg>

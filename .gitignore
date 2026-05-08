@@ -1,0 +1,16 @@
+# IDE / OS
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node (на випадок якщо колись з'явиться)
+node_modules/
+package-lock.json
+
+# Локальні артефакти
+*.log
+.env
+.env.local

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="m3" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#FFE0C0"/>
+      <stop offset="55%" stop-color="#E5A582"/>
+      <stop offset="100%" stop-color="#8E4F38"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#m3)"/>
+  <circle cx="400" cy="450" r="170" fill="rgba(255,250,240,0.36)"/>
+  <circle cx="400" cy="420" r="90" fill="rgba(255,255,250,0.5)"/>
+  <text x="400" y="935" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="rgba(60,30,15,0.6)" font-style="italic">Максим · фото 3</text>
+</svg>
