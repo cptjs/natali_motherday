@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="uk_UA" />
   <meta property="og:title" content="Для тебе · з любов'ю" />
-  <meta property="og:description" content="Історія про одну дівчину, яка завжди мала величезне серце." />
+  <meta property="og:description" content="Це був складний рік. Але сьогодні — твій." />
   <meta property="og:image" content="assets/og-image.svg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -24,12 +24,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@500&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- favicon (мінімальне серце) -->
   <link
     rel="icon"
     type="image/svg+xml"
@@ -37,23 +36,22 @@
   />
 </head>
 <body>
-  <!-- Прогрес-бар читання -->
   <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
 
-  <!-- Музика-перемикач (на майбутнє - закоментовано) -->
-
   <main id="story">
-    <!-- ════════════════════════════════════════════════════════════════
-         АКТ 1 · ВІДКРИТТЯ
-         ════════════════════════════════════════════════════════════════ -->
-    <section class="act act--intro" data-act="1" data-mood="dark">
+
+    <!-- ── 1. Відкриття ─────────────────────────────────────────────── -->
+    <section class="act act--intro" data-mood="dark">
       <div class="dust" aria-hidden="true"></div>
       <div class="vignette" aria-hidden="true"></div>
 
       <div class="act__content act__content--center">
-        <p class="overline reveal" data-reveal-delay="200">розділ перший</p>
-        <h1 class="display display--lg typewriter" data-typewriter data-text="Ця історія про одну дівчину, яка завжди мала величезне серце…"></h1>
-        <p class="caption reveal" data-reveal-delay="3800">провести пальцем вгору ↑</p>
+        <p class="display display--md italic reveal opening-line">
+          Це&nbsp;був складний рік.
+        </p>
+        <p class="display display--lg italic reveal opening-line opening-line--accent" data-reveal-delay="1500">
+          Але&nbsp;сьогодні — твій.
+        </p>
       </div>
 
       <div class="scroll-hint" aria-hidden="true">
@@ -61,19 +59,15 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════════════════════════════════════
-         АКТ 2 · БЛАНКО
-         ════════════════════════════════════════════════════════════════ -->
-    <section class="act act--blanko" data-act="2" data-mood="warm">
+    <!-- ── 2. Бланко-інтро ──────────────────────────────────────────── -->
+    <section class="act act--blanko" data-mood="warm">
       <div class="act__content act__content--center">
-        <p class="overline reveal">розділ другий · ера Бланко</p>
-        <h2 class="display display--md reveal" data-reveal-delay="400">
-          І&nbsp;першим це&nbsp;зрозумів <em>він…</em>
-        </h2>
-        <p class="caption reveal" data-reveal-delay="900">пес, який знав тебе раніше за сина</p>
+        <p class="display display--md italic reveal">
+          Спочатку ти&nbsp;була мамою для&nbsp;<em>Бланко</em>…
+        </p>
       </div>
 
-      <!-- Пасхалка #1: лапка Бланко визирає з-за краю -->
+      <!-- Пасхалка #1: лапка визирає -->
       <svg class="paw paw--peek" viewBox="0 0 24 24" aria-hidden="true">
         <ellipse cx="12" cy="16" rx="4.6" ry="3.7"/>
         <ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/>
@@ -83,25 +77,18 @@
       </svg>
     </section>
 
-    <section class="act act--photo act--blanko" data-act="2" data-mood="warm">
+    <!-- ── 3. Фото 1 · Бланко цуценя ────────────────────────────────── -->
+    <section class="act act--photo act--blanko" data-mood="warm">
       <figure class="photo-frame photo-frame--vintage">
-        <img
-          class="photo photo--vintage reveal-photo"
-          src="assets/blanko-1.svg"
-          alt="Ти і Бланко"
-          loading="lazy"
-          decoding="async"
-        />
-        <!-- TODO: замінити src на реальне фото Бланко №1 -->
+        <img class="photo photo--vintage reveal-photo" src="assets/blanko-1.svg" alt="Ти і Бланко цуценя" loading="lazy" decoding="async" />
+        <!-- TODO: 1. Ти + Бланко малим цуценям -->
       </figure>
-      <figcaption class="caption-block reveal">
-        <p class="caption-block__text">Ти&nbsp;була&nbsp;тою, хто&nbsp;вставав до&nbsp;нього вночі</p>
-      </figcaption>
     </section>
 
-    <section class="act act--photo act--blanko" data-act="2" data-mood="warm" data-blanko-nudge>
+    <!-- ── 4. Фото 2 · Бланко підлітком (з пасхалкою-лапкою) ────────── -->
+    <section class="act act--photo act--blanko" data-mood="warm" data-blanko-nudge>
       <figure class="photo-frame photo-frame--vintage">
-        <!-- Пасхалка #2: лапка штовхає фото — фото здригається -->
+        <!-- Пасхалка #2: лапка штовхає фото -->
         <svg class="paw paw--nudge" viewBox="0 0 24 24" aria-hidden="true">
           <ellipse cx="12" cy="16" rx="4.6" ry="3.7"/>
           <ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/>
@@ -109,43 +96,40 @@
           <ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/>
           <ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/>
         </svg>
-        <img
-          class="photo photo--vintage reveal-photo"
-          src="assets/blanko-2.svg"
-          alt="Прогулянки з Бланко"
-          loading="lazy"
-          decoding="async"
-        />
-        <!-- TODO: замінити src на реальне фото Бланко №2 -->
+        <img class="photo photo--vintage reveal-photo" src="assets/blanko-2.svg" alt="Ти і підрослий Бланко" loading="lazy" decoding="async" />
+        <!-- TODO: 2. Ти + Бланко вже підлітком -->
       </figure>
-      <figcaption class="caption-block reveal">
-        <p class="caption-block__text">Хто&nbsp;гуляв з&nbsp;ним у&nbsp;дощ</p>
-      </figcaption>
     </section>
 
-    <section class="act act--photo act--blanko" data-act="2" data-mood="warm">
+    <!-- ── 5. Фото 3 · Бланко зі смішною мордою ─────────────────────── -->
+    <section class="act act--photo act--blanko" data-mood="warm">
       <figure class="photo-frame photo-frame--vintage">
-        <img
-          class="photo photo--vintage reveal-photo"
-          src="assets/blanko-3.svg"
-          alt="Бланко"
-          loading="lazy"
-          decoding="async"
-        />
-        <!-- TODO: замінити src на реальне фото Бланко №3 -->
+        <img class="photo photo--vintage reveal-photo" src="assets/blanko-3.svg" alt="Бланко зі смішною мордою" loading="lazy" decoding="async" />
+        <!-- TODO: 3. Ти + Бланко (смішна морда) -->
       </figure>
-      <figcaption class="caption-block reveal">
-        <p class="caption-block__text">Хто&nbsp;любив його як&nbsp;сина</p>
-      </figcaption>
     </section>
 
-    <!-- ════════════════════════════════════════════════════════════════
-         АКТ 3 · ПОВОРОТ
-         ════════════════════════════════════════════════════════════════ -->
-    <section class="act act--turn" data-act="3" data-mood="dark">
+    <!-- ── 6. Фото 4 · Вагітна + Бланко (мила) ──────────────────────── -->
+    <section class="act act--photo act--blanko" data-mood="warm">
+      <figure class="photo-frame photo-frame--vintage">
+        <img class="photo photo--vintage reveal-photo" src="assets/pregnancy-1.svg" alt="Вагітна, з Бланко" loading="lazy" decoding="async" />
+        <!-- TODO: 4. Ти вагітна + Бланко (мила) -->
+      </figure>
+    </section>
+
+    <!-- ── 7. Фото 5 · Вагітна + Бланко пісяє (комічна) ─────────────── -->
+    <section class="act act--photo act--blanko" data-mood="warm">
+      <figure class="photo-frame photo-frame--vintage">
+        <img class="photo photo--vintage reveal-photo" src="assets/pregnancy-2.svg" alt="Вагітна, Бланко на задньому плані" loading="lazy" decoding="async" />
+        <!-- TODO: 5. Ти вагітна позуєш + Бланко пісяє ззаду (смішна) -->
+      </figure>
+    </section>
+
+    <!-- ── 8. Поворот · 2025 02.07 ──────────────────────────────────── -->
+    <section class="act act--turn" data-mood="dark">
       <div class="dust dust--soft" aria-hidden="true"></div>
 
-      <!-- Пасхалка #3: слід лапок — Бланко проходить перед "2025" -->
+      <!-- Пасхалка #3: слід лапок -->
       <div class="paw-trail" aria-hidden="true">
         <svg class="paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.6" ry="3.7"/><ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="17.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/><ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/></svg>
         <svg class="paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.6" ry="3.7"/><ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="17.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/><ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/></svg>
@@ -154,143 +138,159 @@
       </div>
 
       <div class="act__content act__content--center">
-        <p class="overline reveal turn-overline">а потім…</p>
         <h2 class="year-mark" data-typewriter-year>2025</h2>
+        <div class="year-mark__date" data-typewriter-md>02.07</div>
         <div class="turn-line">
-          <h3 class="display display--md italic" data-turn-line>Ти стала мамою.</h3>
+          <h3 class="display display--md italic" data-turn-line>
+            Все&nbsp;змінилось — і&nbsp;ти&nbsp;офіційно стала <em>мамою!</em>
+          </h3>
         </div>
       </div>
     </section>
 
-    <section class="act act--hero" data-act="3" data-mood="hero">
+    <!-- ── 9. Фото 6 · Малий 1 місяць (HERO REVEAL) ─────────────────── -->
+    <section class="act act--hero" data-mood="hero">
       <figure class="photo-frame photo-frame--full">
-        <img
-          class="photo photo--hero reveal-hero"
-          src="assets/maksym-hero.svg"
-          alt="Перше фото з Максимом"
-          loading="lazy"
-          decoding="async"
-        />
-        <!-- TODO: ГОЛОВНЕ ФОТО — перше з Максимом. Велике, портретне. -->
-        <figcaption class="hero-caption">
-          <span>Максим</span>
-          <span class="hero-caption__sep">·</span>
-          <span>2025</span>
-        </figcaption>
+        <img class="photo photo--hero reveal-hero" src="assets/maksym-hero.svg" alt="Перше фото Максимчика" loading="lazy" decoding="async" />
+        <!-- TODO: 6. Малий 1 місяць — головне емоційне фото -->
       </figure>
     </section>
 
-    <!-- ════════════════════════════════════════════════════════════════
-         АКТ 4 · НАЙКРАЩИЙ І НАЙВАЖЧИЙ РІК
-         ════════════════════════════════════════════════════════════════ -->
-    <section class="act act--maksym" data-act="4" data-mood="bright">
+    <!-- ── 10. Текст · «Це був важкий рік» ──────────────────────────── -->
+    <section class="act act--moment" data-mood="bright">
       <div class="act__content act__content--center">
-        <p class="overline reveal">розділ четвертий</p>
-        <h2 class="display display--md reveal" data-reveal-delay="400">
-          Це&nbsp;був найкращий <br />і&nbsp;найважчий рік.
-        </h2>
-        <!-- TODO: замінити цю частину на твій точний текст -->
+        <p class="display display--md italic reveal">
+          Це&nbsp;був важкий рік.
+        </p>
       </div>
     </section>
 
-    <section class="act act--photo act--maksym" data-act="4" data-mood="bright">
+    <!-- ── 11. Фото 7 · Сплять разом виснажені ──────────────────────── -->
+    <section class="act act--photo act--maksym" data-mood="bright">
       <figure class="photo-frame">
-        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-1.svg" alt="Максим" loading="lazy" decoding="async" />
-        <!-- TODO: замінити src на реальне фото Максима №1 -->
+        <img class="photo photo--vibrant reveal-photo" src="assets/sleeping.svg" alt="Сплять разом виснажені" loading="lazy" decoding="async" />
+        <!-- TODO: 7. Ти + малий сплять виснажені -->
       </figure>
-      <figcaption class="caption-block reveal">
-        <p class="caption-block__text">
-          Безсонні ночі. Перші зубчики. Сумніви о&nbsp;3-й&nbsp;ранку.
-        </p>
-        <!-- TODO: замінити підпис -->
-      </figcaption>
     </section>
 
-    <section class="act act--photo act--maksym" data-act="4" data-mood="bright">
+    <!-- ── 12. Фото 8 · Удавана злість ──────────────────────────────── -->
+    <section class="act act--photo act--maksym" data-mood="bright">
       <figure class="photo-frame">
-        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-2.svg" alt="Максим" loading="lazy" decoding="async" />
-        <!-- TODO: замінити src на реальне фото Максима №2 -->
+        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-1.svg" alt="Жартівливо сердишся на малого" loading="lazy" decoding="async" />
+        <!-- TODO: 8. Ти жартома сердита на малого -->
       </figure>
-      <figcaption class="caption-block reveal">
-        <p class="caption-block__text">
-          Перша&nbsp;посмішка, що&nbsp;ламає всі&nbsp;твої&nbsp;побоювання навпіл.
-        </p>
-        <!-- TODO: замінити підпис -->
-      </figcaption>
     </section>
 
-    <section class="act act--photo act--maksym" data-act="4" data-mood="bright">
+    <!-- ── 13. Текст · «безсонні ночі...» ───────────────────────────── -->
+    <section class="act act--moment" data-mood="bright">
+      <div class="act__content act__content--center">
+        <p class="display display--md italic reveal">
+          Безсонні ночі. <br />Перші зубчики о&nbsp;3-й&nbsp;ранку.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 14. Фото 9 · На гойдалці ─────────────────────────────────── -->
+    <section class="act act--photo act--maksym" data-mood="bright">
       <figure class="photo-frame">
-        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-3.svg" alt="Максим" loading="lazy" decoding="async" />
-        <!-- TODO: замінити src на реальне фото Максима №3 -->
+        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-2.svg" alt="Ти і малий на гойдалці" loading="lazy" decoding="async" />
+        <!-- TODO: 9. Ти + малий, гойдалка, щасливі -->
       </figure>
-      <figcaption class="caption-block reveal">
-        <p class="caption-block__text">
-          І&nbsp;ти&nbsp;— ніколи&nbsp;— не&nbsp;здавалася.
-        </p>
-      </figcaption>
     </section>
 
-    <!-- Опційне відео. Якщо не потрібно — видалити цю секцію цілком. -->
-    <section class="act act--video" data-act="4" data-mood="bright">
-      <figure class="photo-frame photo-frame--video">
-        <!-- TODO: підкласти видеофайл assets/maksym.mp4 (≤15 сек, до 5 МБ).
-             poster — кадр з відео. -->
-        <video
-          class="reveal-photo"
-          playsinline
-          muted
-          preload="metadata"
-          poster="assets/maksym-2.svg"
-          controls
-        >
-          <source src="assets/maksym.mp4" type="video/mp4" />
-        </video>
+    <!-- ── 15. Фото 10 · Читаєш книжку ──────────────────────────────── -->
+    <section class="act act--photo act--maksym" data-mood="bright">
+      <figure class="photo-frame">
+        <img class="photo photo--vibrant reveal-photo" src="assets/maksym-3.svg" alt="Читаєш малому книжку" loading="lazy" decoding="async" />
+        <!-- TODO: 10. Ти читаєш малому книжку -->
       </figure>
-      <figcaption class="caption-block reveal">
-        <p class="caption-block__text caption-block__text--small italic">
-          невелика мить · 2025
-        </p>
-      </figcaption>
     </section>
 
-    <section class="act act--family" data-act="4" data-mood="bright">
+    <!-- ── 16. Текст · «посмішка, що ламає...» ──────────────────────── -->
+    <section class="act act--moment" data-mood="bright">
+      <div class="act__content act__content--center">
+        <p class="display display--md italic reveal">
+          Посмішка, що&nbsp;ламає всі&nbsp;твої побоювання навпіл.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 17. Фото 11 · Втрьох у ліжку ─────────────────────────────── -->
+    <section class="act act--photo act--maksym" data-mood="bright">
+      <figure class="photo-frame">
+        <img class="photo photo--vibrant reveal-photo" src="assets/family.svg" alt="Ти + Бланко + малий у ліжку" loading="lazy" decoding="async" />
+        <!-- TODO: 11. Ти + Бланко + малий разом у ліжку -->
+      </figure>
+    </section>
+
+    <!-- ── 18. Фото 12 · Зима ───────────────────────────────────────── -->
+    <section class="act act--photo act--maksym" data-mood="bright">
+      <figure class="photo-frame">
+        <img class="photo photo--vibrant reveal-photo" src="assets/winter.svg" alt="Ти і малий взимку" loading="lazy" decoding="async" />
+        <!-- TODO: 12. Ти + малий, зима, щасливі -->
+      </figure>
+    </section>
+
+    <!-- ── 19. Текст · «Але ти ніколи не здавалась» ─────────────────── -->
+    <section class="act act--moment" data-mood="bright">
+      <div class="act__content act__content--center">
+        <p class="display display--md italic reveal">
+          Але&nbsp;ти ніколи не&nbsp;здавалась.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 20. Фото 13 · Бланко + малий ─────────────────────────────── -->
+    <section class="act act--photo act--maksym" data-mood="bright">
+      <figure class="photo-frame">
+        <img class="photo photo--vibrant reveal-photo" src="assets/blanko-baby.svg" alt="Бланко і малий разом" loading="lazy" decoding="async" />
+        <!-- TODO: 13. Бланко + малий разом -->
+      </figure>
+    </section>
+
+    <!-- ── 21. Текст · «Ти — неймовірна» ────────────────────────────── -->
+    <section class="act act--moment" data-mood="bright">
+      <div class="act__content act__content--center">
+        <p class="display display--lg italic reveal">
+          Ти&nbsp;— <em>неймовірна.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 22. Фото 14 · Малий дуже щасливий (FINAL CLIMAX) ─────────── -->
+    <section class="act act--hero act--final-climax" data-mood="hero">
       <figure class="photo-frame photo-frame--full">
-        <img
-          class="photo photo--vibrant reveal-photo"
-          src="assets/family.svg"
-          alt="Наша сім'я"
-          loading="lazy"
-          decoding="async"
-        />
-        <!-- TODO: замінити на сімейне фото (ти, я, Максим, Бланко). -->
+        <img class="photo photo--hero reveal-hero" src="assets/baby-climax.svg" alt="Малий дуже щасливий" loading="lazy" decoding="async" />
+        <!-- TODO: 14. Найновіше фото — малий дуже щасливий (фінал) -->
       </figure>
-      <div class="act__content act__content--bottom">
-        <p class="display display--sm italic reveal">
-          Ти&nbsp;— неймовірна.
+    </section>
+
+    <!-- ── 23. Фінальне присвячення ─────────────────────────────────── -->
+    <section class="act act--dedication" data-mood="warm">
+      <div class="act__content act__content--center">
+        <p class="display display--lg italic reveal dedication-line">
+          Для&nbsp;найкращої мами на&nbsp;світі
+        </p>
+        <p class="dedication-from reveal" data-reveal-delay="800">
+          Від: Максимчика, Бланочки і&nbsp;Олега <span class="heart">💛</span>
         </p>
       </div>
     </section>
 
-    <!-- ════════════════════════════════════════════════════════════════
-         АКТ 5 · APPLE-STYLE CINEMATIC GIFT REVEAL
-         ════════════════════════════════════════════════════════════════ -->
-    <section class="act act--gift" data-act="5" data-mood="cinematic" id="giftReveal">
+    <!-- ── 24. АКТ 5 · APPLE-STYLE GIFT REVEAL ──────────────────────── -->
+    <section class="act act--gift" data-mood="cinematic" id="giftReveal">
       <div class="cinema-bg" aria-hidden="true"></div>
       <div class="cinema-glow" aria-hidden="true"></div>
       <canvas class="sparkles" id="sparkles" aria-hidden="true"></canvas>
 
       <div class="cinema-stage">
-        <!-- ── Прелюдія: показується першою ────────────────────────── -->
         <div class="cinema-prelude" id="prelude">
-          <p class="overline reveal">розділ п'ятий · подарунок</p>
-          <h2 class="display display--md reveal" data-reveal-delay="300">
+          <p class="display display--md italic reveal">
             І&nbsp;тому ти&nbsp;заслуговуєш на&nbsp;маленький <em>подарунок…</em>
-          </h2>
+          </p>
           <p class="cinema-prelude__hint">світло гасне</p>
         </div>
 
-        <!-- ── Yakaboo сертифікат: розкривається кінематографічно ──── -->
         <article class="yakaboo-cert" id="certificate" aria-label="Подарунковий сертифікат Yakaboo">
           <header class="yakaboo-cert__header">
             <span class="yakaboo-cert__brand">yakaboo</span>
@@ -305,17 +305,17 @@
             <span class="yakaboo-cert__currency">₴</span>
             <span class="yakaboo-cert__value">XXXX</span>
           </div>
-          <!-- TODO: замінити XXXX на суму -->
+          <!-- TODO: вписати суму -->
 
           <p class="yakaboo-cert__note">
             «Для&nbsp;найкращої мами на&nbsp;світі — обери собі будь-яку книжку, і&nbsp;трохи&nbsp;тиші, щоб&nbsp;її&nbsp;прочитати.»
           </p>
-          <!-- TODO: замінити текст на свій -->
+          <!-- TODO: текст-присвята всередині сертифіката -->
 
           <div class="yakaboo-cert__code-box">
             <p class="yakaboo-cert__code-label">код сертифіката</p>
             <code class="yakaboo-cert__code" id="certCode">XXXX-XXXX-XXXX-XXXX</code>
-            <!-- TODO: вставити справжній код -->
+            <!-- TODO: справжній код -->
           </div>
 
           <button class="copy-btn" id="copyBtn" type="button">
@@ -327,12 +327,7 @@
           </button>
         </article>
 
-        <!-- ── Фінальне повідомлення + кнопки ──────────────────────── -->
         <div class="cinema-final" id="cinemaFinal">
-          <p class="display display--sm italic final-message">
-            З&nbsp;Днем Матері, кохана.
-          </p>
-
           <div class="actions">
             <button class="btn btn--primary" id="shareBtn" type="button">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -344,14 +339,11 @@
               ↑ З початку
             </button>
           </div>
-
-          <p class="signature">— від&nbsp;того, хто&nbsp;тебе&nbsp;любить</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- toast для копіювання -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js" defer></script>

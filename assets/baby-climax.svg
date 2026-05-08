@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bc" cx="0.5" cy="0.42" r="0.85">
+      <stop offset="0%" stop-color="#fff5e0"/>
+      <stop offset="40%" stop-color="#ffd6a0"/>
+      <stop offset="80%" stop-color="#e89060"/>
+      <stop offset="100%" stop-color="#a04528"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bc)"/>
+  <ellipse cx="400" cy="450" rx="180" ry="210" fill="rgba(255,250,240,0.5)"/>
+  <ellipse cx="400" cy="420" rx="100" ry="115" fill="rgba(255,255,250,0.6)"/>
+  <text x="400" y="935" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="rgba(60,30,15,0.55)" font-style="italic">малий щасливий · фінал</text>
+</svg>

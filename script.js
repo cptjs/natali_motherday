@@ -92,40 +92,67 @@
     }
   }
 
-  /* ── 5. Акт 3 · «2025» + «Ти стала мамою» (з затримкою для лапок) ──── */
+  /* ── 5. Поворот · «2025» + «02.07» + поворотна фраза ──────────────── */
   const yearEl     = $('[data-typewriter-year]');
+  const dateEl     = $('[data-typewriter-md]');
   const turnLineEl = $('[data-turn-line]');
   const turnSection = $('.act--turn');
   let act3Played = false;
 
   const PAW_TRAIL_DURATION_MS = 2400; // лапки Бланко проходять перед роком
+  const YEAR_CHAR_MS = 220;
+  const DATE_CHAR_MS = 130;
+  const DATE_GAP_MS  = 250;
+  const TURN_GAP_MS  = 350;
 
   function playAct3() {
     if (act3Played) return;
     act3Played = true;
 
+    let cursor = PAW_TRAIL_DURATION_MS;
+
+    // Рік
+    let yearLen = 0;
     if (yearEl) {
       const yearText = yearEl.textContent || '2025';
+      yearLen = [...yearText].length;
       const yearSpans = buildChars(yearEl, yearText);
       yearEl.classList.add('is-ready');
 
       if (reduced) {
         yearSpans.forEach((s) => s.classList.add('is-on'));
-        if (turnLineEl) turnLineEl.classList.add('is-on');
-        return;
+      } else {
+        yearSpans.forEach((span, i) => {
+          setTimeout(() => span.classList.add('is-on'), cursor + i * YEAR_CHAR_MS);
+        });
       }
+      cursor += yearLen * YEAR_CHAR_MS;
+    }
 
-      // Спочатку проходять лапки Бланко (CSS-driven), потім «2025»
-      yearSpans.forEach((span, i) => {
-        setTimeout(() => span.classList.add('is-on'), PAW_TRAIL_DURATION_MS + i * 240);
-      });
+    // Дата (нижче року, менший шрифт)
+    if (dateEl) {
+      const dateText = dateEl.textContent || '';
+      const dateSpans = buildChars(dateEl, dateText);
+      dateEl.classList.add('is-ready');
 
-      if (turnLineEl) {
-        const total = PAW_TRAIL_DURATION_MS + yearSpans.length * 240 + 1100;
-        setTimeout(() => turnLineEl.classList.add('is-on'), total);
+      if (reduced) {
+        dateSpans.forEach((s) => s.classList.add('is-on'));
+      } else {
+        cursor += DATE_GAP_MS;
+        dateSpans.forEach((span, i) => {
+          setTimeout(() => span.classList.add('is-on'), cursor + i * DATE_CHAR_MS);
+        });
+        cursor += dateSpans.length * DATE_CHAR_MS;
       }
-    } else if (turnLineEl) {
-      turnLineEl.classList.add('is-on');
+    }
+
+    // Поворотна фраза
+    if (turnLineEl) {
+      if (reduced) {
+        turnLineEl.classList.add('is-on');
+      } else {
+        setTimeout(() => turnLineEl.classList.add('is-on'), cursor + TURN_GAP_MS);
+      }
     }
   }
 

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="p2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c5a5a"/>
+      <stop offset="55%" stop-color="#d09090"/>
+      <stop offset="100%" stop-color="#e8c0a0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#p2)"/>
+  <ellipse cx="380" cy="500" rx="170" ry="210" fill="rgba(255,240,225,0.34)"/>
+  <ellipse cx="380" cy="460" rx="95" ry="115" fill="rgba(255,250,240,0.42)"/>
+  <g opacity="0.65">
+    <ellipse cx="640" cy="700" rx="50" ry="68" fill="rgba(160,120,90,0.7)"/>
+    <path d="M 660 770 Q 670 800 685 815 Q 695 815 690 800 Q 678 780 670 775 Z" fill="rgba(220,200,140,0.8)"/>
+  </g>
+  <text x="400" y="935" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="rgba(80,40,30,0.6)" font-style="italic">вагітність + Бланко (смішне фото)</text>
+</svg>
