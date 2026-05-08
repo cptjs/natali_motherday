@@ -72,6 +72,15 @@
         </h2>
         <p class="caption reveal" data-reveal-delay="900">пес, який знав тебе раніше за сина</p>
       </div>
+
+      <!-- Пасхалка #1: лапка Бланко визирає з-за краю -->
+      <svg class="paw paw--peek" viewBox="0 0 24 24" aria-hidden="true">
+        <ellipse cx="12" cy="16" rx="4.6" ry="3.7"/>
+        <ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/>
+        <ellipse cx="17.5" cy="11" rx="1.7" ry="2.3"/>
+        <ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/>
+        <ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/>
+      </svg>
     </section>
 
     <section class="act act--photo act--blanko" data-act="2" data-mood="warm">
@@ -90,8 +99,16 @@
       </figcaption>
     </section>
 
-    <section class="act act--photo act--blanko" data-act="2" data-mood="warm">
+    <section class="act act--photo act--blanko" data-act="2" data-mood="warm" data-blanko-nudge>
       <figure class="photo-frame photo-frame--vintage">
+        <!-- Пасхалка #2: лапка штовхає фото — фото здригається -->
+        <svg class="paw paw--nudge" viewBox="0 0 24 24" aria-hidden="true">
+          <ellipse cx="12" cy="16" rx="4.6" ry="3.7"/>
+          <ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/>
+          <ellipse cx="17.5" cy="11" rx="1.7" ry="2.3"/>
+          <ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/>
+          <ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/>
+        </svg>
         <img
           class="photo photo--vintage reveal-photo"
           src="assets/blanko-2.svg"
@@ -127,6 +144,15 @@
          ════════════════════════════════════════════════════════════════ -->
     <section class="act act--turn" data-act="3" data-mood="dark">
       <div class="dust dust--soft" aria-hidden="true"></div>
+
+      <!-- Пасхалка #3: слід лапок — Бланко проходить перед "2025" -->
+      <div class="paw-trail" aria-hidden="true">
+        <svg class="paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.6" ry="3.7"/><ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="17.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/><ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/></svg>
+        <svg class="paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.6" ry="3.7"/><ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="17.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/><ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/></svg>
+        <svg class="paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.6" ry="3.7"/><ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="17.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/><ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/></svg>
+        <svg class="paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.6" ry="3.7"/><ellipse cx="6.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="17.5" cy="11" rx="1.7" ry="2.3"/><ellipse cx="9" cy="6.5" rx="1.5" ry="2.1"/><ellipse cx="15" cy="6.5" rx="1.5" ry="2.1"/></svg>
+      </div>
+
       <div class="act__content act__content--center">
         <p class="overline reveal turn-overline">а потім…</p>
         <h2 class="year-mark" data-typewriter-year>2025</h2>
@@ -247,92 +273,80 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         АКТ 5 · ПОДАРУНОК
+         АКТ 5 · APPLE-STYLE CINEMATIC GIFT REVEAL
          ════════════════════════════════════════════════════════════════ -->
-    <section class="act act--gift-intro" data-act="5" data-mood="warm">
-      <div class="act__content act__content--center">
-        <p class="overline reveal">розділ п'ятий · подарунок</p>
-        <h2 class="display display--md reveal" data-reveal-delay="400">
-          І&nbsp;тому ти&nbsp;заслуговуєш на&nbsp;маленький <em>подарунок…</em>
-        </h2>
+    <section class="act act--gift" data-act="5" data-mood="cinematic" id="giftReveal">
+      <div class="cinema-bg" aria-hidden="true"></div>
+      <div class="cinema-glow" aria-hidden="true"></div>
+      <canvas class="sparkles" id="sparkles" aria-hidden="true"></canvas>
 
-        <button
-          class="envelope reveal"
-          id="envelope"
-          type="button"
-          data-reveal-delay="900"
-          aria-label="Відкрити подарунок"
-        >
-          <svg class="envelope__svg" viewBox="0 0 240 160" aria-hidden="true">
-            <!-- тіло конверта -->
-            <rect x="10" y="40" width="220" height="110" rx="6" fill="#f4e2c4" stroke="#c9a064" stroke-width="1.5"/>
-            <!-- бічні складки -->
-            <path d="M 10 40 L 120 110 L 230 40 Z" fill="#e8d2ac" stroke="#c9a064" stroke-width="1"/>
-            <path d="M 10 150 L 90 100 L 10 50 Z" fill="#ecd6b1" stroke="none" opacity="0.6"/>
-            <path d="M 230 150 L 150 100 L 230 50 Z" fill="#ecd6b1" stroke="none" opacity="0.6"/>
-            <!-- верхній клапан (анімований) -->
-            <g class="envelope__flap">
-              <path d="M 10 40 L 120 10 L 230 40 L 120 110 Z" fill="#e8d2ac" stroke="#c9a064" stroke-width="1.5"/>
-            </g>
-            <!-- сургучна печатка -->
-            <g class="envelope__seal">
-              <circle cx="120" cy="75" r="18" fill="#9a3a3a"/>
-              <circle cx="120" cy="75" r="14" fill="none" stroke="#fae3c1" stroke-width="0.8" opacity="0.7"/>
-              <text x="120" y="80" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="16" font-style="italic" fill="#fae3c1">M</text>
-            </g>
-          </svg>
-          <span class="envelope__hint">торкнись, щоб відкрити</span>
-        </button>
-      </div>
-    </section>
+      <div class="cinema-stage">
+        <!-- ── Прелюдія: показується першою ────────────────────────── -->
+        <div class="cinema-prelude" id="prelude">
+          <p class="overline reveal">розділ п'ятий · подарунок</p>
+          <h2 class="display display--md reveal" data-reveal-delay="300">
+            І&nbsp;тому ти&nbsp;заслуговуєш на&nbsp;маленький <em>подарунок…</em>
+          </h2>
+          <p class="cinema-prelude__hint">світло гасне</p>
+        </div>
 
-    <section class="act act--gift-reveal" data-act="5" data-mood="gift" id="giftReveal">
-      <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+        <!-- ── Yakaboo сертифікат: розкривається кінематографічно ──── -->
+        <article class="yakaboo-cert" id="certificate" aria-label="Подарунковий сертифікат Yakaboo">
+          <header class="yakaboo-cert__header">
+            <span class="yakaboo-cert__brand">yakaboo</span>
+            <span class="yakaboo-cert__dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+          </header>
 
-      <div class="act__content act__content--center">
-        <article class="certificate" id="certificate" aria-label="Подарунковий сертифікат">
-          <div class="certificate__corner certificate__corner--tl"></div>
-          <div class="certificate__corner certificate__corner--tr"></div>
-          <div class="certificate__corner certificate__corner--bl"></div>
-          <div class="certificate__corner certificate__corner--br"></div>
+          <p class="yakaboo-cert__overline">подарунковий сертифікат</p>
 
-          <p class="certificate__overline">подарунковий сертифікат</p>
-          <h3 class="certificate__store">[НАЗВА КНИГАРНІ]</h3>
-          <!-- TODO: вписати назву книгарні (Yakaboo / Книгарня «Є» / Vivat / …) -->
-
-          <div class="certificate__amount">
-            <span class="certificate__currency">₴</span>
-            <span class="certificate__value">XXXX</span>
+          <div class="yakaboo-cert__amount">
+            <span class="yakaboo-cert__currency">₴</span>
+            <span class="yakaboo-cert__value">XXXX</span>
           </div>
           <!-- TODO: замінити XXXX на суму -->
 
-          <p class="certificate__note">
-            «Для&nbsp;найкращої мами на&nbsp;світі. <br />Обери собі будь-яку книжку — <br />і&nbsp;трохи&nbsp;тиші, щоб&nbsp;її&nbsp;прочитати.»
+          <p class="yakaboo-cert__note">
+            «Для&nbsp;найкращої мами на&nbsp;світі — обери собі будь-яку книжку, і&nbsp;трохи&nbsp;тиші, щоб&nbsp;її&nbsp;прочитати.»
           </p>
+          <!-- TODO: замінити текст на свій -->
 
-          <div class="certificate__footer">
-            <span class="certificate__code">№ XXXX-XXXX</span>
-            <!-- TODO: код сертифіката або інструкція як використати -->
+          <div class="yakaboo-cert__code-box">
+            <p class="yakaboo-cert__code-label">код сертифіката</p>
+            <code class="yakaboo-cert__code" id="certCode">XXXX-XXXX-XXXX-XXXX</code>
+            <!-- TODO: вставити справжній код -->
           </div>
+
+          <button class="copy-btn" id="copyBtn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span class="copy-btn__label">Скопіювати код</span>
+          </button>
         </article>
 
-        <p class="display display--sm italic final-message">
-          З&nbsp;Днем Матері, кохана.
-        </p>
+        <!-- ── Фінальне повідомлення + кнопки ──────────────────────── -->
+        <div class="cinema-final" id="cinemaFinal">
+          <p class="display display--sm italic final-message">
+            З&nbsp;Днем Матері, кохана.
+          </p>
 
-        <div class="actions">
-          <button class="btn btn--primary" id="shareBtn" type="button">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M14 9V5l7 7-7 7v-4H7c-2 0-3-1-3-3s1-3 3-3h7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-            </svg>
-            <span>Поділитися</span>
-          </button>
-          <button class="btn btn--ghost" id="restartBtn" type="button">
-            ↑ Прочитати знову
-          </button>
+          <div class="actions">
+            <button class="btn btn--primary" id="shareBtn" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M14 9V5l7 7-7 7v-4H7c-2 0-3-1-3-3s1-3 3-3h7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+              <span>Поділитися</span>
+            </button>
+            <button class="btn btn--ghost" id="restartBtn" type="button">
+              ↑ З початку
+            </button>
+          </div>
+
+          <p class="signature">— від&nbsp;того, хто&nbsp;тебе&nbsp;любить</p>
         </div>
-
-        <p class="signature">— від&nbsp;того, хто&nbsp;тебе&nbsp;любить</p>
       </div>
     </section>
   </main>
