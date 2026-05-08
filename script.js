@@ -99,11 +99,11 @@
   const turnSection = $('.act--turn');
   let act3Played = false;
 
-  const PAW_TRAIL_DURATION_MS = 2400; // лапки Бланко проходять перед роком
-  const YEAR_CHAR_MS = 220;
-  const DATE_CHAR_MS = 130;
-  const DATE_GAP_MS  = 250;
-  const TURN_GAP_MS  = 350;
+  const PAW_TRAIL_DURATION_MS = 1400; // лапки Бланко перед роком (зменшено)
+  const YEAR_CHAR_MS = 200;
+  const DATE_CHAR_MS = 120;
+  const DATE_GAP_MS  = 220;
+  const TURN_GAP_MS  = 320;
 
   function playAct3() {
     if (act3Played) return;
@@ -319,6 +319,42 @@
       if (particles.length > 0) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
+  }
+
+  /* ── 7.5 Password gate: код «7589» розблоковує суму + код ─────────── */
+  const PASSWORD = '7589';
+  const passInput = $('#passInput');
+  const certEl    = $('#certificate');
+
+  if (passInput && certEl) {
+    passInput.addEventListener('input', (e) => {
+      // тримаємо тільки цифри
+      const cleaned = e.target.value.replace(/\D/g, '').slice(0, 4);
+      if (cleaned !== e.target.value) e.target.value = cleaned;
+
+      if (cleaned.length === 4) {
+        if (cleaned === PASSWORD) {
+          certEl.classList.add('is-unlocked');
+          $('#certUnlocked')?.setAttribute('aria-hidden', 'false');
+          passInput.disabled = true;
+          passInput.blur();
+          if (navigator.vibrate) navigator.vibrate([20, 60, 20]);
+        } else {
+          passInput.classList.add('is-wrong');
+          if (navigator.vibrate) navigator.vibrate(40);
+          setTimeout(() => {
+            passInput.classList.remove('is-wrong');
+            passInput.value = '';
+            passInput.focus();
+          }, 700);
+        }
+      }
+    });
+
+    // Enter — підтвердити навіть якщо коротше 4
+    passInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') e.preventDefault();
+    });
   }
 
   /* ── 8. Кнопка «Скопіювати код» ───────────────────────────────────── */

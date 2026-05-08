@@ -567,6 +567,16 @@ body {
 }
 
 /* ── Поворот: 2025 + дата + поворотна фраза ─────────────────────────── */
+.year-mark,
+.year-mark__date {
+  /* приховано до моменту коли JS збудує літерні spans (нема flash) */
+  visibility: hidden;
+}
+.year-mark.is-ready,
+.year-mark__date.is-ready {
+  visibility: visible;
+}
+
 .year-mark {
   font-family: var(--font-display);
   font-weight: 300;
@@ -1030,6 +1040,155 @@ body {
   font-size: 1rem;
   font-weight: 700;
   margin-right: 2px;
+}
+
+/* ── Отримувач (кому сертифікат) ─────────────────────────────────── */
+.yakaboo-cert__recipient {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  color: rgba(255, 220, 180, 0.6);
+  text-align: center;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.yakaboo-cert__recipient em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: #fff5d8;
+  margin-left: 6px;
+}
+
+/* ── Термін дії (видно після розблокування) ──────────────────────── */
+.yakaboo-cert__validity {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-align: center;
+  color: rgba(255, 220, 180, 0.42);
+  margin-top: 14px;
+  text-wrap: balance;
+  line-height: 1.5;
+}
+
+/* ── Замок (стартовий стан, видно ВСІМ) ──────────────────────────── */
+.cert-lock {
+  text-align: center;
+  margin-top: 6px;
+  padding: 16px 14px 14px;
+  background: rgba(255, 220, 180, 0.04);
+  border: 1px dashed rgba(255, 220, 180, 0.20);
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  max-height: 240px;
+  overflow: hidden;
+  transition:
+    opacity 0.55s var(--ease-cinema),
+    transform 0.55s var(--ease-cinema),
+    max-height 0.65s var(--ease-cinema),
+    padding 0.55s var(--ease-cinema),
+    margin 0.55s var(--ease-cinema),
+    border-color 0.45s;
+}
+.is-unlocked .cert-lock {
+  opacity: 0;
+  transform: translateY(-12px);
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  border-color: transparent;
+  pointer-events: none;
+}
+.cert-lock__hint {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255, 220, 180, 0.78);
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+.cert-lock__sub {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 220, 180, 0.38);
+  margin-top: 12px;
+}
+.cert-lock__input {
+  width: 110px;
+  padding: 11px 10px;
+  border: 1.5px solid rgba(255, 180, 130, 0.4);
+  border-radius: 12px;
+  background: rgba(15, 5, 30, 0.55);
+  color: #fff5d8;
+  font-family: "JetBrains Mono", "IBM Plex Mono", "SF Mono", Menlo, monospace;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(255, 220, 180, 0.06) inset;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s,
+    background 0.3s;
+  -webkit-appearance: none;
+  appearance: none;
+  caret-color: #ffae84;
+}
+.cert-lock__input::placeholder {
+  color: rgba(255, 180, 130, 0.32);
+  letter-spacing: 0.28em;
+}
+.cert-lock__input:focus {
+  border-color: rgba(255, 180, 130, 0.7);
+  box-shadow:
+    0 0 0 4px rgba(255, 180, 130, 0.12),
+    0 1px 0 rgba(255, 220, 180, 0.12) inset;
+  background: rgba(15, 5, 30, 0.78);
+}
+.cert-lock__input.is-wrong {
+  border-color: rgba(220, 90, 90, 0.7);
+  box-shadow: 0 0 0 4px rgba(220, 90, 90, 0.18);
+  animation: shakeInput 0.5s var(--ease-soft);
+}
+@keyframes shakeInput {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-7px); }
+  40%      { transform: translateX(6px); }
+  60%      { transform: translateX(-4px); }
+  80%      { transform: translateX(3px); }
+}
+
+/* ── Розблокована частина (сума, код, кнопка, термін) ─────────────── */
+.cert-unlocked {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(18px);
+  position: relative;
+  z-index: 1;
+  transition:
+    opacity 0.7s var(--ease-cinema) 0.25s,
+    transform 0.75s var(--ease-cinema) 0.25s,
+    max-height 0.85s var(--ease-cinema);
+}
+.is-unlocked .cert-unlocked {
+  opacity: 1;
+  max-height: 380px;
+  transform: translateY(0);
 }
 
 /* фінальний блок (виїжджає знизу після reveal) */
