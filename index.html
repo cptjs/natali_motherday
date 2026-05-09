@@ -33,15 +33,7 @@
   />
 </head>
 <body>
-  <div class="progress" id="storyCue" aria-hidden="true">
-    <span class="progress__label" id="progressLabel">гортай далі</span>
-    <span class="progress__rail"><span class="progress__bar" id="progressBar"></span></span>
-    <span class="progress__chevron">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-  </div>
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
 
   <main id="story">
 
@@ -59,6 +51,14 @@
         </p>
       </div>
 
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint__label">проведи донизу</span>
+        <span class="scroll-hint__chevron">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
     </section>
 
     <!-- 2 · Бланко-інтро -->

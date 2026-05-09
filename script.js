@@ -30,22 +30,13 @@
 
   /* ── 2. progress bar ───────────────────────────────────────────────── */
   const progressBar = $('#progressBar');
-  const progressCue = $('#storyCue');
-  const progressLabel = $('#progressLabel');
   let rafProgress = 0;
   const updateProgress = () => {
     if (rafProgress) return;
     rafProgress = requestAnimationFrame(() => {
       const max = story.scrollHeight - story.clientHeight;
       const pct = max > 0 ? (story.scrollTop / max) * 100 : 0;
-      const clamped = Math.max(0, Math.min(100, pct));
-      progressBar.style.width = clamped + '%';
-
-      if (progressCue && progressLabel) {
-        const complete = clamped > 96;
-        progressCue.classList.toggle('is-complete', complete);
-        progressLabel.textContent = complete ? 'фінал' : 'гортай далі';
-      }
+      progressBar.style.width = Math.max(0, Math.min(100, pct)) + '%';
       rafProgress = 0;
     });
   };
