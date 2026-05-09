@@ -530,22 +530,45 @@ body {
 /* ── скрол-підказка ────────────────────────────────────────────────── */
 .scroll-hint {
   position: absolute;
-  inset: auto 0 calc(var(--safe-bottom) + 22px);
+  inset: auto 0 calc(var(--safe-bottom) + 18px);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   pointer-events: none;
   z-index: 2;
+  color: rgba(240, 220, 180, 0.78);
+  animation: scrollHintFade 0.8s var(--ease-soft) 1.6s both;
 }
-.scroll-hint__line {
-  width: 1px;
-  height: 36px;
-  background: linear-gradient(to bottom, transparent, rgba(240, 220, 180, 0.7));
-  animation: scrollPulse 2.4s ease-in-out infinite;
-  transform-origin: top;
+.scroll-hint__label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
-@keyframes scrollPulse {
-  0%, 100% { transform: scaleY(0.4); opacity: 0; }
-  40%, 60% { transform: scaleY(1); opacity: 0.9; }
+.scroll-hint__chevron {
+  display: block;
+  width: 22px;
+  height: 22px;
+  animation: scrollBounce 1.8s var(--ease-soft) infinite;
+}
+.scroll-hint__chevron svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@keyframes scrollHintFade {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0);   opacity: 0.55; }
+  50%      { transform: translateY(7px); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint__chevron { animation: none; opacity: 0.85; }
 }
 
 /* ── progress bar ───────────────────────────────────────────────────── */
