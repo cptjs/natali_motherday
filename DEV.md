@@ -173,12 +173,14 @@ Tuning тайминги: константи `PAW_TRAIL_DURATION_MS`, `YEAR_CHAR_
 
 | Час | Що відбувається |
 |---|---|
-| 0s | prelude видна (текст «І тому ти заслуговуєш…») |
-| 1.8s | `.is-darkening` на `.act--gift` → `.cinema-bg` opacity 1, `.cinema-glow` росте |
-| 1.8s | `.is-fading` на prelude → opacity 0 + translateY(-30px) |
-| 3.3s | `.is-revealing` → glow scale 2.4, `.is-emerging` на cert → scale 0.32 → 1, blur 18 → 0 |
-| 4.1s | `startSparkles()` — canvas-вибух |
-| 5.4s | `.is-visible` на `.cinema-final` → buttons fade in |
+| 0s | prelude видна (текст «І тому ми хотіли подарувати тобі трохи тиші…») |
+| 3.8s | `.is-darkening` на `.act--gift` → `.cinema-bg` opacity 1, `.cinema-glow` росте |
+| 3.8s | `.is-fading` на prelude → opacity 0 + translateY(-30px) |
+| 5.3s | `.is-revealing` → glow scale 2.4, `.is-emerging` на cert → scale 0.32 → 1, blur 18 → 0 |
+| 6.1s | `startSparkles()` — canvas-вибух |
+| 7.4s | `.is-visible` на `.cinema-final` → buttons fade in |
+
+Hold-час прелюдії калібрується під довжину тексту — якщо змінюватимеш фразу, перевір що вона встигає прочитатись (рахуй ~250-300ms на слово italic Cormorant + запас на reveal-анімацію). Зараз 3.8s розраховано на 8-слівний рядок.
 
 Easing для cert: `cubic-bezier(0.16, 1, 0.3, 1)` — Apple ease-out-quint.
 

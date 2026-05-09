@@ -183,24 +183,24 @@
       return;
     }
 
-    // A · Утримання прелюдії (0 → 1.8s) — користувач читає текст
-    // B · Затемнення сцени + прелюдія тане вгору (1.8s → 3.3s)
+    // A · Утримання прелюдії (0 → 3.8s) — користувач читає текст
+    // B · Затемнення сцени + прелюдія тане вгору (3.8s → 5.3s)
     setTimeout(() => {
       giftSection.classList.add('is-darkening');
       prelude?.classList.add('is-fading');
-    }, 1800);
+    }, 3800);
 
-    // C · Картка з'являється з glow (3.3s → 5.0s)
+    // C · Картка з'являється з glow (5.3s → 7.0s)
     setTimeout(() => {
       giftSection.classList.add('is-revealing');
       cert?.classList.add('is-emerging');
-    }, 3300);
+    }, 5300);
 
-    // D · Іскри-sparkles вибухають з-за картки (4.1s)
-    setTimeout(startSparkles, 4100);
+    // D · Іскри-sparkles вибухають з-за картки (6.1s)
+    setTimeout(startSparkles, 6100);
 
-    // E · Фінальний блок фейдиться знизу (5.4s)
-    setTimeout(() => cinemaFinal?.classList.add('is-visible'), 5400);
+    // E · Фінальний блок фейдиться знизу (7.4s)
+    setTimeout(() => cinemaFinal?.classList.add('is-visible'), 7400);
   }
 
   if (giftSection) {
