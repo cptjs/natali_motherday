@@ -577,16 +577,17 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.06);
+  height: 3px;
+  background: rgba(80, 50, 25, 0.14);
   z-index: 100;
   pointer-events: none;
 }
 .progress__bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
-  transition: width 120ms linear;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold) 55%, var(--gold-soft));
+  box-shadow: 0 0 6px rgba(201, 160, 100, 0.55), 0 1px 0 rgba(0, 0, 0, 0.18);
+  transition: width 160ms linear;
 }
 
 /* ── Поворот: 2025 + дата + поворотна фраза ─────────────────────────── */
